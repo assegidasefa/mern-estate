@@ -11,10 +11,10 @@ import {
   updateUserStart,
   updateUserSuccess,
   updateUserFailure,
-  deleteUserFailure,
-  deleteUserStart,
-  deleteUserSuccess,
-  signOutUserStart,
+  // deleteUserFailure,
+  // deleteUserStart,
+  // deleteUserSuccess,
+  // signOutUserStart,
 } from '../redux/user/userSlice';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -29,7 +29,7 @@ export default function Profile() {
   const [showListingsError, setShowListingsError] = useState(false);
   const [userListings, setUserListings] = useState([]);
   const dispatch = useDispatch();
-
+  console.log("current user ",currentUser)
   // firebase storage
   // allow read;
   // allow write: if
