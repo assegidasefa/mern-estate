@@ -7,8 +7,8 @@ import Profile from './pages/Profile';
 import Header from './components/Header';
 import PrivateRoute from './components/PrivateRoute.jsx';
 import CreateListing from './pages/CreateListing.jsx';
-// import UpdateListing from './pages/UpdateListing';
-// import Listing from './pages/Listing';
+import UpdateListing from './pages/UpdateListing';
+import Listing from './pages/Listing.jsx';
 // import Search from './pages/Search';
 
 export default function App() {
@@ -21,15 +21,15 @@ export default function App() {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/about' element={<About />} />
         {/* <Route path='/search' element={<Search />} /> */}
-        {/* <Route path='/listing/:listingId' element={<Listing />} /> */}
+        <Route path='/listing/:listingId' element={<Listing />} />
 
         <Route element={<PrivateRoute />}>
           <Route path='/profile' element={<Profile />} />
           <Route path='/create-listing' element={<CreateListing />} />
-          {/* <Route
+          <Route
             path='/update-listing/:listingId'
             element={<UpdateListing />}
-          /> */}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
